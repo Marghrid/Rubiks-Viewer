@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+	<title>Rubik Cube Viewer</title>
+
+</head>
+<body>
+    
+	<h1>rubik cube</h1>
+	<canvas id="c"></canvas>
+    <div onclick="cube.rotate90(0); cube.update_view();">rotate_face_1</div>
+    <div onclick="cube.rotate90(1); cube.update_view();">rotate_face_2</div>
+    <div onclick="cube.rotate90(2); cube.update_view();">rotate_face_3</div>
+    <div onclick="cube.rotate90(3); cube.update_view();">rotate_face_4</div>
+    <div onclick="cube.rotate90(4); cube.update_view();">rotate_face_5</div>
+    <div onclick="cube.rotate90(5); cube.update_view();">rotate_face_6</div>
+    <div id="cube_text_box"></div>
+
+    <!--include this and remove the line below to use an up to date version -->
+    <!--<script src='https://git.io/glm-js.min.js'></script>-->
+    <script src='third-party/glm-js.min.js'></script>
+    
+    <script src="js/cube.js"></script> 
+    <script src="js/renderer.js"></script> 
+	<script src="js/input.js"></script> 
+	<script src="js/main.js"></script>
+</body>
