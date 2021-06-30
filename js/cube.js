@@ -62,6 +62,34 @@ var cube= {
                 error("unknown color")
         }
     },
+    colorMap: function(n){
+        switch(n){
+            case 0:
+                return "#ffde08";
+                break;
+            case 1:
+                return "#0051ff";
+                break;
+            case 2:
+                return "#db0b00";
+                break;
+            case 3:
+                return "#00b548";
+                break;
+            case 4:
+                return  "#ede7e3";
+                break;
+            case 5:
+                return "#ff9900";
+                break;
+            default:
+                error("unknown color")
+        }
+    },
+
+    idxToHTML: function(n){
+        return '<a style="font-family:monospace; color:'+this.colorMap(n)+'">'+this.idxToColor(n)+'</a>';
+    },
 
     rotate90: function(face_n){
         let face = copy_array(this.faces[face_n]);
@@ -123,7 +151,7 @@ var cube= {
             str+="<tr>"
             for(let j = 0; j<3; j++){
                 str+="<th>"
-                str+= this.idxToColor(this.faces[face_n][i*3+j]);
+                str+= this.idxToHTML(this.faces[face_n][i*3+j]);
                 str+="</th>"
             }
             str+="</tr>"
